@@ -4,112 +4,39 @@
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<title>Lower to upper CAZZZ</title>
-	<style>
-	
-		body{
-			background: #eee;
-			text-align:center;
-			color:#333;
-			font-family: sans-serif;
-		}
-		div{
-			width:80%;
-			margin: 15px auto;
-		}
-		textarea, span#result{
-			display:block;
-			width:100%;
-			height:100px;
-			outline:none;
-			border:none;
-			background: #fafafa;
-			border-radius:5px;
-			text-align:left;
-			padding:10px;
-			margin-top:10px;
-		}
-		span#result{
-			overflow-y:auto; 
-		}
-		button{
-			padding:10px;
-			border:1px silver solid;
-			border-radius: 5px;
-		}
-		button#toUpper{
-			background: #d55;
-		}
-		button#toLower{
-			background: #dc5;
-		}
-
-		#close, #drag{
-			position:absolute;
-			top:10px;
-			right:10px;
-			font-weight: bold;
-		}
-		#close:hover{
-			color:#a00;
-			cursor:pointer;
-		}
-		#drag{
-			right:35px;
-			-webkit-app-region: drag;
-		}
-
-	</style>
+	<link rel="stylesheet" href="style.css">
 </head>
 <body>
-	<span id="drag">
-		&equiv;
+
+	<span class="window-ctrls">
+		<span class="w-control move" title="Move the window"></span>
+		<span class="w-control minimize" onclick="winCtrl('minimize')" title="Minimize"></span>
+		<span class="w-control maximize" onclick="winCtrl('maximize')" title="Maximize"></span>
+		<span class="w-control close" onclick="winCtrl('close')" title="Close"></span>
 	</span>
-	<span id="close" onclick="window.close()">
-		X
-	</span>
 
-	<h3 style="-webkit-app-region: drag;">
-		Case Converter by ZeZeN <sup>&copy;</sup>
-	</h3>
+	<div id="content">
+		<!-- <p style="-webkit-app-region: drag;">
+			Case Converter by ZeZeN <sup>&copy;</sup>
+		</p> -->
+		
+		<div>
+			Source:<br>
+			<textarea id="source" placeholder="Write or paste something here..."></textarea>
+		</div>
 
-	<div>
-		Source:<br>
-		<textarea id="source" placeholder="Write or paste something here..."></textarea>
+		<div>
+			<button onclick="convert(true)" id="toUpper">lowercase -> UPPERCASE</button>
+			<button onclick="convert(false)" id="toLower">UPPERCASE -> lowercase</button>		
+		</div>
+		
+		<div>
+			Result:<br>
+			<span id="result"></span>
+		</div>	
 	</div>
 
-	<div>
-		<button onclick="convert(true)" id="toUpper">lowercase -> UPPERCASE</button>
-		<button onclick="convert(false)" id="toLower">UPPERCASE -> lowercase</button>		
-	</div>
-	
-	<div>
-		Result:<br>
-		<span id="result"></span>
-	</div>
-
-
-	<script>
-
-		function convert(toUp){
-			var source = document.getElementById('source').value,
-				result = document.getElementById('result');
-
-			if(source.length > 0){
-				if(toUp){
-					result.innerHTML = source.toUpperCase();
-				}
-				else{
-					result.innerHTML = source.toLowerCase();
-				}
-				
-			}
-			else{
-				alert("Write or paste something to convert please!");
-			}
-
-		}
-
-	</script>
+	<script src="app.js"></script>
 	
 </body>
 </html>
