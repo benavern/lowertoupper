@@ -4,25 +4,6 @@ var gui = require('nw.gui');
 var win = gui.Window.get();
 win.isMaximized = false;
 
-function convert(toUp){
-	var source = document.getElementById('source').value,
-		result = document.getElementById('result');
-
-	if(source.length > 0){
-		if(toUp){
-			result.innerHTML = source.toUpperCase();
-		}
-		else{
-			result.innerHTML = source.toLowerCase();
-		}
-		
-	}
-	else{
-		alert("Write or paste something to convert please!");
-	}
-}
-
-
 function winCtrl(action){
 	switch(action){
 
@@ -44,4 +25,14 @@ function winCtrl(action){
 			win.minimize()
 			break;
 	}
+}
+
+function convert(){
+	var source = document.getElementById('source').value,
+		resultup = document.getElementById('resultup');
+		resultlo = document.getElementById('resultlo');
+
+	resultup.innerHTML = source.toUpperCase();
+	resultlo.innerHTML = source.toLowerCase();
+	
 }

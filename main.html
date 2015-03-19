@@ -16,23 +16,15 @@
 	</span>
 
 	<div id="content">
-		<!-- <p style="-webkit-app-region: drag;">
-			Case Converter by ZeZeN <sup>&copy;</sup>
-		</p> -->
-		
+		<h1>LowerToUpper</h1>
 		<div>
-			Source:<br>
-			<textarea id="source" placeholder="Write or paste something here..."></textarea>
+			<textarea id="source" placeholder="Write or paste something here..."
+					onkeyup="convert()"></textarea>
 		</div>
 
 		<div>
-			<button onclick="convert(true)" id="toUpper">lowercase -> UPPERCASE</button>
-			<button onclick="convert(false)" id="toLower">UPPERCASE -> lowercase</button>		
-		</div>
-		
-		<div>
-			Result:<br>
-			<span id="result"></span>
+			<textarea class="result" id="resultup" placeholder="... RESULT ..." readonly></textarea>
+			<textarea class="result" id="resultlo" placeholder="... result ..." readonly></textarea>
 		</div>	
 	</div>
 

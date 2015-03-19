@@ -5,6 +5,7 @@
 		"title": "ZeZeN's Tool",
 		"toolbar" : false,
 		"frame": false,
-		"position": "mouse"
+		"transparent":true
+		// "position": "mouse"
 	}
 }

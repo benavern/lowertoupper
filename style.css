@@ -1,10 +1,14 @@
-body{
-	background: #eee;
+*{
 	margin:0;
 	padding:0;
 	box-sizing:border-box;
 }
 
+html, body{
+	background: #ccc;
+	font-family: arial, sans-serif;
+	border-radius:5px;
+}
 
 
 /*
@@ -25,34 +29,40 @@ body{
 	cursor:pointer;
 }
 .window-ctrls .w-control.close:hover{
-	background: red;
+	background: Crimson;
 }
 .window-ctrls .w-control.maximize:hover{
-	background: green;
+	background: Gold;
 }
 .window-ctrls .w-control.minimize:hover{
-	background: orange;
+	background: LimeGreen;
 }
 .window-ctrls .w-control.move{
-	/*background: blue;*/
+	background: Teal;
 	opacity:0.3;
 	-webkit-app-region: drag;
 }
+
+
 
 /*
 *	content
 */
 
 #content{
-	text-align:center;
-	color:#333;
-	font-family: sans-serif;
-}
-#content div{
-	width:80%;
+	width:90%;
 	margin: 15px auto;
 }
-#content textarea, #content span#result{
+
+#content h1{
+	text-align:center;	
+	-webkit-app-region: drag;
+}
+#content > div{
+	margin-top:30px;
+}
+
+#content textarea{
 	display:block;
 	width:100%;
 	height:100px;
@@ -64,17 +74,13 @@ body{
 	padding:10px;
 	margin-top:10px;
 }
-#content span#result{
-	overflow-y:auto; 
+
+#content textarea#source{
+	box-shadow:0 0 20px LimeGreen;
 }
-#content button{
-	padding:10px;
-	border:1px silver solid;
-	border-radius: 5px;
+#content textarea#resultup{
+	box-shadow:0 0 20px Gold;
 }
-#content button#toUpper{
-	background: #d55;
-}
-#content button#toLower{
-	background: #dc5;
+#content textarea#resultlo{
+	box-shadow:0 0 20px Crimson;
 }
