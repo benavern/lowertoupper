@@ -15,3 +15,13 @@ This is the result of what I gave here. She was happy with it, and I was happy t
 * unzip it
 * double click on nw.exe (*you should create a shortcut on the desktop ...*) 
 * paste your text and enjoy the magic :).
+
+
+* green *type or paste text to convert*
+* yellow *uppercase result*
+* red *lowercase result*
+
+
+* next to the window controls, there is a blue circle that permits you to drag the window
+
+NEW! the title allows you to drag the window too.
